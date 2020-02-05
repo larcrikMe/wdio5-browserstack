@@ -232,7 +232,12 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     // reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
-    reporters: ['spec'],
+    reporters: ['spec', 'junit'],
+    reporterOptions:{
+        jnunit: {
+            outputDir: './'
+        }
+    },
  
     //
     // Options to be passed to Mocha.

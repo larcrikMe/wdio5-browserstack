@@ -239,6 +239,7 @@ exports.config = {
             outputFileFormat: function (options) {
                 return 'myJunitFile.xml';
             }
+        }
     },
  
     //

@@ -235,7 +235,9 @@ exports.config = {
     reporters: ['spec', 'junit'],
     reporterOptions:{
         jnunit: {
-            outputDir: './'
+            outputDir: './junit-results',
+            outputFileFormat: function(options) { // optional
+                return `results-${options.cid}.${options.capabilities}.xml`
         }
     },
  

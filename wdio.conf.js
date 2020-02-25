@@ -3,44 +3,12 @@ const debug = process.env.DEBUG === 'true';
 const mochaTimeout = debug ? 999999 : 60000;
 
 let capabilities = [
-    //{
-//     //
-//     browserName: 'chrome',
-//     'bstack:options' : {
-//         os: 'Windows',
-//         osVersion: '10',
-//         resolution: '1280x1024',
-//         projectName: 'Demo Run',
-//         buildName: Date.now().toString(),
-//         debug
-//     },
-//     // If outputDir is provided WebdriverIO can capture driver session logs
-//     // it is possible to configure which logTypes to include/exclude.
-//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-//     // excludeDriverLogs: ['bugreport', 'server'],
-// }, 
-// {
-//     //
-//     browserName: 'firefox',
-//     'bstack:options' : {
-//         os: 'Windows',
-//         osVersion: '10',
-//         resolution: '1280x1024',
-//         projectName: 'Demo Run',
-//         buildName: Date.now().toString(),
-//         debug
-//     },
-//     // If outputDir is provided WebdriverIO can capture driver session logs
-//     // it is possible to configure which logTypes to include/exclude.
-//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-//     // excludeDriverLogs: ['bugreport', 'server'],
-// },
-{
+    {
     //
     browserName: 'chrome',
     'bstack:options' : {
-        os: 'OS X',
-        osVersion: 'High Sierra',
+        os: 'Windows',
+        osVersion: '10',
         resolution: '1280x1024',
         projectName: 'Demo Run',
         buildName: Date.now().toString(),
@@ -51,6 +19,38 @@ let capabilities = [
     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
     // excludeDriverLogs: ['bugreport', 'server'],
 }, 
+{
+    //
+    browserName: 'firefox',
+    'bstack:options' : {
+        os: 'Windows',
+        osVersion: '10',
+        resolution: '1280x1024',
+        projectName: 'Demo Run',
+        buildName: Date.now().toString(),
+        debug
+    },
+    // If outputDir is provided WebdriverIO can capture driver session logs
+    // it is possible to configure which logTypes to include/exclude.
+    // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+    // excludeDriverLogs: ['bugreport', 'server'],
+},
+// {
+//     //
+//     browserName: 'chrome',
+//     'bstack:options' : {
+//         os: 'OS X',
+//         osVersion: 'High Sierra',
+//         resolution: '1280x1024',
+//         projectName: 'Demo Run',
+//         buildName: Date.now().toString(),
+//         debug
+//     },
+//     // If outputDir is provided WebdriverIO can capture driver session logs
+//     // it is possible to configure which logTypes to include/exclude.
+//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+//     // excludeDriverLogs: ['bugreport', 'server'],
+// }, 
 // {
 //     //
 //     browserName: 'firefox',

@@ -2,76 +2,76 @@ const debug = process.env.DEBUG === 'true';
 
 const mochaTimeout = debug ? 999999 : 60000;
 
-let capabilities = [
-    {
-    //
-    browserName: 'chrome',
-    'bstack:options' : {
-        os: 'Windows',
-        osVersion: '10',
-        resolution: '1280x1024',
-        projectName: 'Demo Run',
-        buildName: Date.now().toString(),
-        debug
-    },
-    // If outputDir is provided WebdriverIO can capture driver session logs
-    // it is possible to configure which logTypes to include/exclude.
-    // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    // excludeDriverLogs: ['bugreport', 'server'],
-}, 
-{
-    //
-    browserName: 'firefox',
-    'bstack:options' : {
-        os: 'Windows',
-        osVersion: '10',
-        resolution: '1280x1024',
-        projectName: 'Demo Run',
-        buildName: Date.now().toString(),
-        debug
-    },
-    // If outputDir is provided WebdriverIO can capture driver session logs
-    // it is possible to configure which logTypes to include/exclude.
-    // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    // excludeDriverLogs: ['bugreport', 'server'],
-},
-{
-    //
-    browserName: 'chrome',
-    'bstack:options' : {
-        os: 'OS X',
-        osVersion: 'High Sierra',
-        resolution: '1280x1024',
-        projectName: 'Demo Run',
-        buildName: Date.now().toString(),
-        debug
-    },
-    // If outputDir is provided WebdriverIO can capture driver session logs
-    // it is possible to configure which logTypes to include/exclude.
-    // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    // excludeDriverLogs: ['bugreport', 'server'],
-}, 
-{
-    //
-    browserName: 'firefox',
-    'bstack:options' : {
-        os: 'OS X',
-        osVersion: 'High Sierra',
-        resolution: '1280x1024',
-        projectName: 'Demo Run',
-        buildName: Date.now().toString(),
-        debug
-    },
-    // If outputDir is provided WebdriverIO can capture driver session logs
-    // it is possible to configure which logTypes to include/exclude.
-    // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    // excludeDriverLogs: ['bugreport', 'server'],
-}, 
-]
+// let capabilities = [
+//     {
+//     //
+//     browserName: 'chrome',
+//     'bstack:options' : {
+//         os: 'Windows',
+//         osVersion: '10',
+//         resolution: '1280x1024',
+//         projectName: 'Demo Run',
+//         buildName: Date.now().toString(),
+//         debug
+//     },
+//     // If outputDir is provided WebdriverIO can capture driver session logs
+//     // it is possible to configure which logTypes to include/exclude.
+//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+//     // excludeDriverLogs: ['bugreport', 'server'],
+// }, 
+// {
+//     //
+//     browserName: 'firefox',
+//     'bstack:options' : {
+//         os: 'Windows',
+//         osVersion: '10',
+//         resolution: '1280x1024',
+//         projectName: 'Demo Run',
+//         buildName: Date.now().toString(),
+//         debug
+//     },
+//     // If outputDir is provided WebdriverIO can capture driver session logs
+//     // it is possible to configure which logTypes to include/exclude.
+//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+//     // excludeDriverLogs: ['bugreport', 'server'],
+// },
+// {
+//     //
+//     browserName: 'chrome',
+//     'bstack:options' : {
+//         os: 'OS X',
+//         osVersion: 'High Sierra',
+//         resolution: '1280x1024',
+//         projectName: 'Demo Run',
+//         buildName: Date.now().toString(),
+//         debug
+//     },
+//     // If outputDir is provided WebdriverIO can capture driver session logs
+//     // it is possible to configure which logTypes to include/exclude.
+//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+//     // excludeDriverLogs: ['bugreport', 'server'],
+// }, 
+// {
+//     //
+//     browserName: 'firefox',
+//     'bstack:options' : {
+//         os: 'OS X',
+//         osVersion: 'High Sierra',
+//         resolution: '1280x1024',
+//         projectName: 'Demo Run',
+//         buildName: Date.now().toString(),
+//         debug
+//     },
+//     // If outputDir is provided WebdriverIO can capture driver session logs
+//     // it is possible to configure which logTypes to include/exclude.
+//     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+//     // excludeDriverLogs: ['bugreport', 'server'],
+// }, 
+// ]
 
-if (debug) {
-    capabilities = [capabilities[0]]
-}
+// if (debug) {
+//     capabilities = [capabilities[0]]
+// }
 exports.config = {
     //
     // ====================
@@ -149,25 +149,25 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 15,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-   capabilities,
-    // capabilities: [{
-    //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-    //     // grid with only 5 firefox instances available you can make sure that not more than
-    //     // 5 instances get started at a time.
-    //     maxInstances: 5,
-    //     //
-    //     browserName: 'chrome',
-    //     // If outputDir is provided WebdriverIO can capture driver session logs
-    //     // it is possible to configure which logTypes to include/exclude.
-    //     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    //     // excludeDriverLogs: ['bugreport', 'server'],
-    // }],
+  // capabilities,
+    capabilities: [{
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 1,
+        //
+        browserName: 'chrome',
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
+    }],
     //
     // ===================
     // Test Configurations
@@ -232,15 +232,15 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     // reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
-    reporters: ['spec', 'junit'],
-    reporterOptions:{
-        jnunit: {
-            outputDir: './junit-results',
-            outputFileFormat: function (options) {
-                return 'myJunitFile.xml';
+    reporters: [
+        'spec',
+        ['junit', {
+            outputDir: 'junit-results',
+            outputFileFormat: function(options) { // optional
+                return `results-${options.cid}.${options.capabilities}.xml`
             }
-        }
-    },
+        }]
+    ],
  
     //
     // Options to be passed to Mocha.
